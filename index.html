@@ -1,50 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Sustainable Games | Play for the Planet</title>
-  <meta name="description" content="Play sustainable and eco-friendly games that promote environmental awareness. Built for a greener web." />
-  <meta name="keywords" content="sustainable games, eco games, green gaming, environment games" />
 
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Sustainable games website promoting eco-friendly awareness through simple browser games.">
+  <meta name="keywords" content="sustainable games, eco games, green gaming, environment">
+  <meta name="author" content="Sustainable Games">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #e8f5e9;
+      color: #1b1b1b;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    button {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #256528;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #c8e6c9;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <h1>🌍 Sustainable Games</h1>
-    <p>Play. Learn. Protect the Planet.</p>
-  </header>
 
-  <main>
-    <section class="game-card">
-      <h2>♻️ Recycling Challenge</h2>
-      <p>Sort waste correctly to earn green points.</p>
-      <button onclick="playRecycling()">Play</button>
-      <p id="recycling-result"></p>
-    </section>
+<header>
+  <h1>🌍 Sustainable Games</h1>
+  <p>Play Games. Learn Sustainability. Save the Planet.</p>
+</header>
 
-    <section class="game-card">
-      <h2>🌳 Tree Counter</h2>
-      <p>Plant virtual trees and see your impact grow.</p>
-      <button onclick="plantTree()">Plant a Tree</button>
-      <p id="tree-count">Trees planted: 0</p>
-    </section>
+<main>
 
-    <section class="info">
-      <h2>Why Sustainable Gaming?</h2>
-      <p>
-        This website is built using minimal code, no trackers,
-        no ads, and efficient assets to reduce energy usage.
-      </p>
-    </section>
-  </main>
+  <div class="card">
+    <h2>♻️ Recycling Quiz</h2>
+    <p>Plastic bottles should be thrown into:</p>
+    <button onclick="alert('Correct! Plastic goes to recycling.')">Recycling Bin</button>
+    <button onclick="alert('Wrong. Try again!')">Trash Bin</button>
+  </div>
 
-  <footer>
-    <p>© 2026 Sustainable Games | Built for GitHub Pages</p>
-  </footer>
+  <div class="card">
+    <h2>🌳 Tree Plant Counter</h2>
+    <p id="count">Trees planted: 0</p>
+    <button onclick="plantTree()">Plant a Tree</button>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="card">
+    <h2>Why Sustainable Gaming?</h2>
+    <p>
+      This website uses minimal code, no trackers, no ads, and no heavy frameworks.
+      It loads fast and consumes less energy — helping reduce digital carbon footprint.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Sustainable Games | Built for GitHub Pages
+</footer>
+
+<script>
+  let trees = 0;
+  function plantTree() {
+    trees++;
+    document.getElementById("count").innerText = "Trees planted: " + trees;
+  }
+</script>
+
 </body>
 </html>
+
